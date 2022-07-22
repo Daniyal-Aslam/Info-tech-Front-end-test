@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+li{list-style-type: none;}
+a{text-decoration: none;}
+/* HEADER MENU STYLES BEGIN */
+.head-menu-bar{
+    background: #333333; 
+    padding: 10px 0;
+}
+.header-menu-list,.header-menu-list ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-menu-list ul li{
+    padding: 10px;
+    color: #fff;
+}
+.header-menu-list ul li a{
+    color: #fff;
+}
+.header-menu-list ul li.active{
+    background: #04aa6d; 
+} 
+.menu-toggler button{
+   background: 0; 
+   margin:0 20px;
+   outline: 0;
+   border: 0;
+   cursor: pointer;
+   display: none;
+}
+.menu-toggler button span{  
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: 25px;
+    margin: 5px 0; 
+} 
+/* HEADER MENU STYLES END */
+/* RESPONSIVE STYLES BEGIN */
+@media screen and (max-width:767px){  
+    .header-menu-list ul{flex-direction: column;} 
+    .header-menu-list, .header-menu-list ul{align-items: flex-start;} 
+        .header-menu-list ul li{position: relative;}
+        .header-menu-list ul li a{display: block;}
+        .header-menu-list ul li.contact{position: relative;z-index: 1;}
+        .header-menu-list ul li.contact a{color: #000;} 
+        .header-menu-list ul li.contact::before{content:''; background: #fff; height: 100%;left: 0;top: 0; width: 125%;position: absolute;z-index: -1; }
+        .header-menu-list ul li.active.on{display: block;}
+        .header-menu-list ul li.active,
+        .menu-toggler button{display: inline-block;width: 100%;}
+        .menu-toggler button{margin: 0;padding:10px;} 
+        .menu-toggler,.header-menu-item{display: inline-block;vertical-align: text-top;}
+        .header-menu-item{width: 80%;}
+        .header-menu-list ul{display: block;}
+        .menu-toggler{width: 20%;margin-left: -1%; background: #04aa6d;}
+        .menu-toggler button{text-align: -webkit-center;}
+        .menu-toggler,.header-menu-list ul li.active{min-height: 50px;}
+        .head-menu-bar{  padding: 0;}
+        .header-menu-list {display: block;}
+        .header-menu-list ul li{display: none;}
+        .header-menu-list ul li.mb-view{display: block; transition: 0.6s ease;}
+        .header-menu-item.mb-view ul li{display: block;}
+}
+/* RESPONSIVE STYLES END */
