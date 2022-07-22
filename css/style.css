@@ -59,7 +59,7 @@ a{text-decoration: none;}
         .menu-toggler,.header-menu-item{display: inline-block;vertical-align: text-top;}
         .header-menu-item{width: 80%;}
         .header-menu-list ul{display: block;}
-        .menu-toggler{width: 20%;margin-left: -1%; background: #04aa6d;}
+        .menu-toggler{width: 20%;margin-left: -1.5%; background: #04aa6d;}
         .menu-toggler button{text-align: -webkit-center;}
         .menu-toggler,.header-menu-list ul li.active{min-height: 50px;}
         .head-menu-bar{  padding: 0;}
